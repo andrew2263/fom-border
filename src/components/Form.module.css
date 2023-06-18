@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  width: 450px;
+  min-height: 100vh;
+  /*min-height: max-content;*/
+}
+
+h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+@media(max-width:480px) {
+  .container {
+    width: 350px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form__heading {
+  border: 1px solid #a9a9a9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.form__block {
+  padding: 20px 10px;
+  border-left: 1px solid #a9a9a9;
+  border-right: 1px solid #a9a9a9;
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width:1024px) and (max-width:1365px) {
+  .form {
+    margin: 50px auto;
+  }
+
+  .form__block {
+    height: 250px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+  }
+}
+
+@media(min-width:1024px) and (max-width:1365px) and (min-height:750px) {
+  .form__block {
+   height: auto;
+  }
+}
+
+.form__block input {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+}
+
+.form__block input:focus {
+  border: 1px solid #123322;
+}
+
+.form__block input:focus::placeholder {
+  color: red;
+}
+
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__group:last-child {
+  margin-bottom: 0;
+}
+
+.name, .email, .phone {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid #c5c5c5;
+}
+
+.name_notFocus, .email_notFocus, .phone_notFocus {
+  border-bottom: 0;
+}
+
+.surname, .confirm, .country {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: 0;
+  border-left: 1px solid #c5c5c5;
+  border-right: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.form__bottom {
+  padding: 10px;
+  border: 1px solid #a9a9a9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
